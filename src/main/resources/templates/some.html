@@ -9,19 +9,21 @@
 		<p th:text="'Der Name ist: ' + ${name} + '!'"></p>
 		
 		<div>
-			<label>Aktion:
-				<input type="text" placeholder="Meine letzte Aktivität" name="myAction" id="myAction" class="action-input">
-			</label>
-			<label>Gemütszustand:
-				<select>
-					<option value="1">Super</option>
-					<option value="1">Gut</option>
-					<option value="1">Okay</option>
-					<option value="1">Nicht gut</option>
-					<option value="1">Mies</option>
-				</select>
-			</label>
-			<button type="submit">Eintragen</button>
+			<form method="post" action="/test">
+				<label>Aktion:
+					<input type="text" placeholder="Meine letzte Aktivität" name="myAction" id="myAction" class="action-input">
+				</label>
+				<label>Gemütszustand:
+					<select>
+						<option value="1">Super</option>
+						<option value="1">Gut</option>
+						<option value="1">Okay</option>
+						<option value="1">Nicht gut</option>
+						<option value="1">Mies</option>
+					</select>
+				</label>
+				<button type="submit">Eintragen</button>
+			</form>
 		</div>
 	</body>
 </html>

@@ -1,5 +1,7 @@
 package de.xenadu.msa;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @SpringBootApplication
 @RestController
 public class MentalStatesAndActionsApplication {
+	
+	private static final Logger logger = LogManager.getLogger(MentalStatesAndActionsApplication.class);
 
 	public static void main(String[] args) {
+		logger.info("App startet in main Methode");
 		SpringApplication.run(MentalStatesAndActionsApplication.class, args);
+		logger.info("Spring App gestartet");
 	}
 	
 	@GetMapping("/muh")
