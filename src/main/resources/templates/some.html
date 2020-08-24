@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Dies ist ein Test</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<h2 th:text="${myHeader}"></h2>
+		<p th:text="'Der Name ist: ' + ${name} + '!'"></p>
+		
+		<div>
+			<label>Aktion:
+				<input type="text" placeholder="Meine letzte Aktivität" name="myAction" id="myAction" class="action-input">
+			</label>
+			<label>Gemütszustand:
+				<select>
+					<option value="1">Super</option>
+					<option value="1">Gut</option>
+					<option value="1">Okay</option>
+					<option value="1">Nicht gut</option>
+					<option value="1">Mies</option>
+				</select>
+			</label>
+			<button type="submit">Eintragen</button>
+		</div>
+	</body>
+</html>
